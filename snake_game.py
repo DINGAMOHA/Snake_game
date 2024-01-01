@@ -10,7 +10,7 @@ SNAKE_COLOR = "#00FF00"
 FOOD_COLOR = "#FF0000"
 BACKGROUND_COLOR = "#000000"
 
-
+#creating class for the snake(player)
 class Snake:
 
     def __init__(self):
@@ -25,7 +25,7 @@ class Snake:
             square = canvas.create_rectangle(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=SNAKE_COLOR, tag="snake")
             self.squares.append(square)
 
-
+#class for the apple
 class Food:
  # here we generated the food random respawn places in the screen
     def __init__(self):
@@ -123,7 +123,7 @@ def game_over():
     canvas.create_text(canvas.winfo_width()/2, canvas.winfo_height()/2,
                        font=('consolas',70), text="GAME OVER", fill="red", tag="gameover")
 
-# Here we will make the window for the game
+# Here we will make the window for the game using Tkinter
 window = Tk()
 window.title("Snake game")
 window.resizable(False, False)
